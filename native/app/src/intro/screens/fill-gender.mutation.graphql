@@ -1,0 +1,13 @@
+mutation fillProfileGender($gender: ProfileGender!) {
+  fillProfileGender(input: { gender: $gender }) {
+    result {
+      ...ProfileFragment
+    }
+    errors {
+      gender {
+        id
+        message
+      }
+    }
+  }
+}

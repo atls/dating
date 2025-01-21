@@ -1,0 +1,17 @@
+query myMatches {
+  my {
+    matching {
+      matches {
+        matches {
+          profile {
+            ...ProfileFragment
+          }
+          similarity {
+            id
+            value
+          }
+        }
+      }
+    }
+  }
+}

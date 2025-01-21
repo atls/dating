@@ -1,0 +1,13 @@
+mutation fillProfileName($name: String!) {
+  fillProfileName(input: { name: $name }) {
+    result {
+      ...ProfileFragment
+    }
+    errors {
+      name {
+        id
+        message
+      }
+    }
+  }
+}
