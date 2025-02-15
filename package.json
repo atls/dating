@@ -3,6 +3,11 @@
   "private": true,
   "license": "BSD 3-Clause",
   "type": "module",
+  "workspaces": [
+    "applications/**/*",
+    "contexts/**/*",
+    "shared/**/*"
+  ],
   "devDependencies": {
     "@atls/code-runtime": "2.1.2",
     "@types/node": "22.10.2",
