@@ -3,7 +3,7 @@
 import type { FunctionComponent } from 'react'
 import type { ReactElement }      from 'react'
 
-import { GiftIcon }               from '@ui-admin/icons'
+import { GiftIcon }               from '@atls-ui-admin/icons'
 import { usePathname }            from 'next/navigation.js'
 import { createElement }          from 'react'
 import NextLinkPkg                from 'next/link.js'

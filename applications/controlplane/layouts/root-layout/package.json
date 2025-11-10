@@ -9,10 +9,10 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@ui-admin/bottom-navigation": "^0.0.14",
-    "@ui-admin/icons": "^0.0.7",
-    "@ui-admin/layout": "^0.0.15",
-    "@ui-admin/sidebar": "^0.0.16"
+    "@atls-ui-admin/bottom-navigation": "^0.0.14",
+    "@atls-ui-admin/icons": "^0.0.7",
+    "@atls-ui-admin/layout": "^0.0.15",
+    "@atls-ui-admin/sidebar": "^0.0.16"
   },
   "devDependencies": {
     "@effector/next": "^0.7.0",

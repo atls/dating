@@ -2366,9 +2366,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/react-kratos@npm:^0.0.4":
+"@monstrs/react-kratos@npm:^0.0.4":
   version: 0.0.4
-  resolution: "@atls/react-kratos@npm:0.0.4"
+  resolution: "@monstrs/react-kratos@npm:0.0.4"
   dependencies:
     "@ory/client": "npm:^1.4.7"
     axios: "npm:^1.6.3"
@@ -2378,11 +2378,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/react-native-kratos@npm:^0.0.3":
+"@monstrs/react-native-kratos@npm:^0.0.3":
   version: 0.0.3
-  resolution: "@atls/react-native-kratos@npm:0.0.3"
+  resolution: "@monstrs/react-native-kratos@npm:0.0.3"
   dependencies:
-    "@atls/react-kratos": "npm:^0.0.4"
+    "@monstrs/react-kratos": "npm:^0.0.4"
   peerDependencies:
     "@react-native-async-storage/async-storage": ^1
     expo-auth-session: ^5
@@ -5425,7 +5425,7 @@ __metadata:
     "@babel/core": "npm:^7.20.0"
     "@expo/config-plugins": "npm:~7.8.0"
     "@expo/webpack-config": "npm:~19.0.1"
-    "@atls/react-native-kratos": "npm:^0.0.3"
+    "@monstrs/react-native-kratos": "npm:^0.0.3"
     "@ory/client": "npm:^1.2.17"
     "@react-native-async-storage/async-storage": "npm:1.21.0"
     "@react-navigation/bottom-tabs": "npm:^6.5.11"

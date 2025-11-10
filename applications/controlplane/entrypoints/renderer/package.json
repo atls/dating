@@ -33,5 +33,11 @@
     "effector": "^22.8.8",
     "effector-react": "^22.5.4",
     "typescript": "^5.3.3"
+  },
+  "tools": {
+    "tunnel": {
+      "host": "https://tunnel.stage.atls.tech",
+      "port": 3000
+    }
   }
 }
