@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+package tech.monstrs.dating.profiles.v1alpha1;
+
+import "google/protobuf/timestamp.proto";
+import "tech/monstrs/queries/v1alpha1/queries.proto";
+
+service ProfilesService {
+  rpc FillProfileGeoposition(FillProfileGeopositionRequest) returns (FillProfileGeopositionResponse) {}
+  rpc FillProfileGender(FillProfileGenderRequest) returns (FillProfileGenderResponse) {}
+  rpc FillProfileName(FillProfileNameRequest) returns (FillProfileNameResponse) {}
+  rpc AddProfilePhoto(AddProfilePhotoRequest) returns (AddProfilePhotoResponse) {}
+  rpc SkipProfile(SkipProfileRequest) returns (SkipProfileResponse) {}
+  rpc LikeProfile(LikeProfileRequest) returns (LikeProfileResponse) {}
+  rpc ListProfiles(ListProfilesRequest) returns (ListProfilesResponse) {}
+  rpc GetMatches(GetMatchesRequest) returns (GetMatchesResponse) {}
+}
+
+enum ProfileGender {
+  MALE = 0;
+  FEMALE = 1;
+}
+
+message ProfileGeoposition {
+  float latitude = 1;
+  float longitude = 2;
+}
+
+message Profile {
+  string id = 1;
+  optional ProfileGender gender = 2;
+  optional string name = 3;
+  optional string location = 4;
+  optional ProfileGeoposition geoposition = 5;
+  repeated string photos = 6;
+  google.protobuf.Timestamp created_at = 7;
+}
+
+message Similarity {
+  string id = 1;
+  float value = 2;
+}
+
+message Match {
+  Profile profile = 1;
+  optional Similarity similarity = 2;
+}
+
+message FillProfileGeopositionRequest {
+  string profile_id = 1;
+  float latitude = 2;
+  float longitude = 3;
+}
+
+message FillProfileGeopositionResponse {
+  Profile result = 1;
+}
+
+message FillProfileGenderRequest {
+  string profile_id = 1;
+  ProfileGender gender = 2;
+}
+
+message FillProfileGenderResponse {
+  Profile result = 1;
+}
+
+message FillProfileNameRequest {
+  string profile_id = 1;
+  string name = 2;
+}
+
+message FillProfileNameResponse {
+  Profile result = 1;
+}
+
+message AddProfilePhotoRequest {
+  string profile_id = 1;
+  string photo_id = 2;
+}
+
+message AddProfilePhotoResponse {
+  Profile result = 1;
+}
+
+message SkipProfileRequest {
+  string profile_id = 1;
+  string target_id = 2;
+}
+
+message SkipProfileResponse {
+  Profile result = 1;
+}
+
+message LikeProfileRequest {
+  string profile_id = 1;
+  string target_id = 2;
+}
+
+message LikeProfileResponse {
+  Profile result = 1;
+}
+
+message ListProfilesRequest {
+  message ProfilesQuery {
+    tech.monstrs.queries.v1alpha1.Query.ID id = 1;
+  }
+
+  tech.monstrs.queries.v1alpha1.Query.Pager pager = 1;
+  tech.monstrs.queries.v1alpha1.Query.Order order = 2;
+  tech.monstrs.queries.v1alpha1.Query.Search search = 3;
+  ProfilesQuery query = 4;
+}
+
+message ListProfilesResponse {
+  repeated Profile profiles = 1;
+  bool has_next_page = 2;
+}
+
+
+message GetMatchesRequest {
+  string profile_id = 1;
+}
+
+message GetMatchesResponse {
+  repeated Match matches = 1;
+  bool has_next_page = 2;
+}
