@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 
-import type { ExtractProperties } from '@monstrs/base-types'
+import type { ExtractProperties } from '@atls/base-types'
 
 import type { ProfileEntity }     from '../entities/index.js'
 import type { LikeEntity }        from '../entities/index.js'

@@ -10,7 +10,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@monstrs/guard-clause": "^0.0.7",
+    "@atls/guard-clause": "^0.0.2",
     "compute-cosine-similarity": "^1.1.0",
     "uuid": "^9.0.1"
   },

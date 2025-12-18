@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import type { IdentityBody }    from '../webhooks/index.js'
 
-import { Logger }               from '@monstrs/logger'
+import { Logger }               from '@atls/logger'
 import { Body }                 from '@nestjs/common'
 import { Controller }           from '@nestjs/common'
 import { Post }                 from '@nestjs/common'

@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tech.monstrs.dating.profiles.v1alpha1;
+package tech.atls.dating.profiles.v1alpha1;
 
 import "google/protobuf/timestamp.proto";
-import "tech/monstrs/queries/v1alpha1/queries.proto";
+import "tech/atls/queries/v1alpha1/queries.proto";
 
 service ProfilesService {
   rpc FillProfileGeoposition(FillProfileGeopositionRequest) returns (FillProfileGeopositionResponse) {}
@@ -103,12 +103,12 @@ message LikeProfileResponse {
 
 message ListProfilesRequest {
   message ProfilesQuery {
-    tech.monstrs.queries.v1alpha1.Query.ID id = 1;
+    tech.atls.queries.v1alpha1.Query.ID id = 1;
   }
 
-  tech.monstrs.queries.v1alpha1.Query.Pager pager = 1;
-  tech.monstrs.queries.v1alpha1.Query.Order order = 2;
-  tech.monstrs.queries.v1alpha1.Query.Search search = 3;
+  tech.atls.queries.v1alpha1.Query.Pager pager = 1;
+  tech.atls.queries.v1alpha1.Query.Order order = 2;
+  tech.atls.queries.v1alpha1.Query.Search search = 3;
   ProfilesQuery query = 4;
 }
 

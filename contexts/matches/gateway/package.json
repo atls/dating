@@ -10,7 +10,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@monstrs/protobuf-rpc": "^0.0.7",
+    "@atls/protobuf-rpc": "^0.0.6",
     "@profiles/client-module": "workspace:0.0.1",
     "@shared/gateway-types": "workspace:0.0.1"
   },

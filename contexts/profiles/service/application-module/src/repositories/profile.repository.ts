@@ -1,4 +1,4 @@
-import type { Query }   from '@monstrs/query-types'
+import type { Query }   from '@atls/query-types'
 import type { Profile } from '@profiles/domain-module'
 
 export interface ProfilesQuery {

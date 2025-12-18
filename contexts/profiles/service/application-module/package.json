@@ -10,8 +10,8 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@atls/query-types": "^0.0.2",
     "@compatibility/domain-module": "workspace:0.0.1",
-    "@monstrs/query-types": "^0.0.9",
     "@profiles/domain-module": "workspace:0.0.1"
   },
   "devDependencies": {

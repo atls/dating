@@ -1,7 +1,7 @@
 version: v1
 
 deps:
-  - buf.build/monstrs/queries
+  - buf.build/atls/queries
 
 lint:
   use:

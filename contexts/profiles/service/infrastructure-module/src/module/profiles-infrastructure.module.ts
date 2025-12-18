@@ -1,7 +1,7 @@
 import type { DynamicModule }          from '@nestjs/common'
 
 import { MikroOrmModule }              from '@mikro-orm/nestjs'
-import { ValidationModule }            from '@monstrs/nestjs-validation'
+import { ValidationModule }            from '@atls/nestjs-validation'
 import { Module }                      from '@nestjs/common'
 
 import { ProfilesApplicationModule }   from '@profiles/application-module'

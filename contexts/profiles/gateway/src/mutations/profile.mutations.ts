@@ -1,5 +1,5 @@
 import type * as rpc                         from '@profiles/client-module'
-import type { ValidationError }              from '@monstrs/protobuf-rpc'
+import type { ValidationError }              from '@atls/protobuf-rpc'
 
 import type { FillProfileGenderErrors }      from '../errors/index.js'
 import type { FillProfileNameErrors }        from '../errors/index.js'
@@ -12,7 +12,7 @@ import { Mutation }                          from '@nestjs/graphql'
 import { Resolver }                          from '@nestjs/graphql'
 import { Context }                           from '@nestjs/graphql'
 import { Args }                              from '@nestjs/graphql'
-import { findValidationErrorDetails }        from '@monstrs/protobuf-rpc'
+import { findValidationErrorDetails }        from '@atls/protobuf-rpc'
 
 import { ProfilesClient }                    from '@profiles/client-module'
 

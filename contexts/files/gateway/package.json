@@ -10,9 +10,9 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@atls/protobuf-rpc": "0.0.6",
     "@bufbuild/protobuf": "^1.7.2",
     "@files-system/files-rpc-client": "^0.0.6",
-    "@monstrs/protobuf-rpc": "0.0.7",
     "@shared/gateway-types": "workspace:0.0.1",
     "dataloader": "^2.2.2",
     "nestjs-dataloader": "patch:nestjs-dataloader@npm%3A9.0.0#~/.yarn/patches/nestjs-dataloader-npm-9.0.0-5411d766d3.patch"

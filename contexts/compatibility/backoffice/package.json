@@ -10,10 +10,10 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@atls/nestjs-pipes": "^0.0.1",
+    "@atls/protobuf-rpc": "0.0.6",
     "@bufbuild/protobuf": "^1.7.2",
-    "@compatibility/client-module": "workspace:0.0.1",
-    "@monstrs/nestjs-pipes": "^0.0.2",
-    "@monstrs/protobuf-rpc": "0.0.7"
+    "@compatibility/client-module": "workspace:0.0.1"
   },
   "devDependencies": {
     "@nestjs/common": "^10.3.3",

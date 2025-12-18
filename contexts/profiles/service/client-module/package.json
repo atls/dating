@@ -10,7 +10,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@monstrs/logger": "^0.0.20",
+    "@atls/logger": "^0.0.4",
     "@profiles/profiles-rpc": "workspace:0.0.1",
     "dataloader": "^2.2.2"
   },

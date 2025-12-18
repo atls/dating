@@ -1,11 +1,11 @@
-import type { ValidationError }       from '@monstrs/protobuf-rpc'
+import type { ValidationError }       from '@atls/protobuf-rpc'
 
 import { Context }                    from '@nestjs/graphql'
 import { Args }                       from '@nestjs/graphql'
 import { Mutation }                   from '@nestjs/graphql'
 import { Resolver }                   from '@nestjs/graphql'
 import { client }                     from '@files-system/files-rpc-client'
-import { findValidationErrorDetails } from '@monstrs/protobuf-rpc'
+import { findValidationErrorDetails } from '@atls/protobuf-rpc'
 
 import { ConfirmUploadInput }         from '../inputs/index.js'
 import { CreateUploadInput }          from '../inputs/index.js'

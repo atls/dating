@@ -17,12 +17,12 @@
     "buf:update": "buf mod update proto"
   },
   "devDependencies": {
+    "@atls/protoc-gen-abstractions": "^0.0.4",
+    "@atls/protoc-gen-interfaces": "^0.0.7",
     "@bufbuild/buf": "^1.29.0",
     "@bufbuild/protobuf": "^1.7.2",
     "@bufbuild/protoc-gen-es": "^1.7.2",
-    "@connectrpc/protoc-gen-connect-es": "^1.3.0",
-    "@monstrs/protoc-gen-abstractions": "^0.0.5",
-    "@monstrs/protoc-gen-interfaces": "^0.0.4"
+    "@connectrpc/protoc-gen-connect-es": "^1.3.0"
   },
   "peerDependencies": {
     "@bufbuild/protobuf": "^1"

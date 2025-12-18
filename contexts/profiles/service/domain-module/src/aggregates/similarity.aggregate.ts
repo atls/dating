@@ -1,5 +1,5 @@
-import { Guard }                  from '@monstrs/guard-clause'
-import { Against }                from '@monstrs/guard-clause'
+import { Guard }                  from '@atls/guard-clause'
+import { Against }                from '@atls/guard-clause'
 import { AggregateRoot }          from '@nestjs/cqrs'
 import { v4 as uuid }             from 'uuid'
 import similarity                 from 'compute-cosine-similarity'

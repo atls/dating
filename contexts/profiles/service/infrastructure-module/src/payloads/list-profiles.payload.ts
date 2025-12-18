@@ -3,10 +3,10 @@
 import type { ListProfilesRequest_ProfilesQuery } from '@profiles/profiles-rpc/interfaces'
 import type { ListProfilesRequest }               from '@profiles/profiles-rpc/interfaces'
 
-import { IdQueryPayload }                         from '@monstrs/rpc-query-payloads'
-import { OrderPayload }                           from '@monstrs/rpc-query-payloads'
-import { PagerPayload }                           from '@monstrs/rpc-query-payloads'
-import { SearchPayload }                          from '@monstrs/rpc-query-payloads'
+import { IdQueryPayload }                         from '@atls/rpc-query-payloads'
+import { OrderPayload }                           from '@atls/rpc-query-payloads'
+import { PagerPayload }                           from '@atls/rpc-query-payloads'
+import { SearchPayload }                          from '@atls/rpc-query-payloads'
 import { IsOptional }                             from 'class-validator'
 import { ValidateNested }                         from 'class-validator'
 
