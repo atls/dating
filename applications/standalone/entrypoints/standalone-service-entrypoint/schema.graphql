@@ -1,0 +1,262 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ValidationError {
+  id: String!
+  message: String!
+}
+
+type AddSurveyAnswerErrors {
+  surveyId: ValidationError
+  questionId: ValidationError
+  answer: ValidationError
+}
+
+type StartSurveyErrors {
+  questionaireId: ValidationError
+}
+
+type ConfirmUploadErrors {
+  id: ValidationError
+}
+
+type CreateUploadErrors {
+  bucket: ValidationError
+  name: ValidationError
+  size: ValidationError
+}
+
+type Upload {
+  id: String!
+  url: String!
+}
+
+type File {
+  id: String!
+  url: String!
+}
+
+type ConfirmUploadResponse {
+  result: File
+  errors: ConfirmUploadErrors
+}
+
+type CreateUploadResponse {
+  result: Upload
+  errors: CreateUploadErrors
+}
+
+type Question {
+  id: String!
+  content: String!
+}
+
+type Answer {
+  id: String!
+  value: Float
+}
+
+type Survey {
+  id: String!
+  status: SurveyStatus!
+  answers: [Answer!]!
+}
+
+enum SurveyStatus {
+  STARTED
+  COMPLETED
+}
+
+type Questionaire {
+  id: String!
+  status: QuestionaireStatus!
+  name: String!
+  photo: File
+  questions: [Question!]!
+  survey: Survey
+}
+
+enum QuestionaireStatus {
+  INACTIVE
+  ACTIVE
+}
+
+type MyCompatibility {
+  questionaires: [Questionaire!]!
+}
+
+type AddSurveyAnswerResponse {
+  result: Survey
+  errors: AddSurveyAnswerErrors
+}
+
+type StartSurveyResponse {
+  result: Survey
+  errors: StartSurveyErrors
+}
+
+type FillProfileGeopositionErrors {
+  latitude: ValidationError
+  longitude: ValidationError
+}
+
+type FillProfileGenderErrors {
+  gender: ValidationError
+}
+
+type FillProfileNameErrors {
+  name: ValidationError
+}
+
+type AddProfilePhotoErrors {
+  photoId: ValidationError
+}
+
+type SkipProfileErrors {
+  targetId: ValidationError
+}
+
+type LikeProfileErrors {
+  targetId: ValidationError
+}
+
+type Profile {
+  id: String!
+  gender: ProfileGender
+  name: String
+  location: String
+  photos: [File!]!
+}
+
+enum ProfileGender {
+  MALE
+  FEMALE
+}
+
+type Similarity {
+  id: String!
+  value: Float!
+}
+
+type Match {
+  profile: Profile!
+  similarity: Similarity
+}
+
+type Matches {
+  matches: [Match!]!
+  hasNextPage: Boolean!
+}
+
+type MyMatching {
+  matches: Matches!
+}
+
+type MyProfile {
+  info: Profile!
+}
+
+type FillProfileGeopositionResponse {
+  result: Profile
+  errors: FillProfileGeopositionErrors
+}
+
+type FillProfileGenderResponse {
+  result: Profile
+  errors: FillProfileGenderErrors
+}
+
+type FillProfileNameResponse {
+  result: Profile
+  errors: FillProfileNameErrors
+}
+
+type AddProfilePhotoResponse {
+  result: Profile
+  errors: AddProfilePhotoErrors
+}
+
+type SkipProfileResponse {
+  result: Profile
+  errors: SkipProfileErrors
+}
+
+type LikeProfileResponse {
+  result: Profile
+  errors: LikeProfileErrors
+}
+
+type MyMatches {
+  profiles: [Profile!]!
+}
+
+type User {
+  id: String!
+  profile: MyProfile!
+  matching: MyMatching!
+  matches: MyMatches!
+  compatibility: MyCompatibility!
+}
+
+type Query {
+  my: User!
+}
+
+type Mutation {
+  fillProfileGender(input: FillProfileGenderInput!): FillProfileGenderResponse!
+  fillProfileName(input: FillProfileNameInput!): FillProfileNameResponse!
+  fillProfileGeoposition(input: FillProfileGeopositionInput!): FillProfileGeopositionResponse!
+  addProfilePhoto(input: AddProfilePhotoInput!): AddProfilePhotoResponse!
+  skipProfile(input: SkipProfileInput!): SkipProfileResponse!
+  likeProfile(input: LikeProfileInput!): LikeProfileResponse!
+  startSurvey(input: StartSurveyInput!): StartSurveyResponse!
+  addSurveyAnswer(input: AddSurveyAnswerInput!): AddSurveyAnswerResponse!
+  createUpload(input: CreateUploadInput!): CreateUploadResponse!
+  confirmUpload(input: ConfirmUploadInput!): ConfirmUploadResponse!
+}
+
+input FillProfileGenderInput {
+  gender: ProfileGender!
+}
+
+input FillProfileNameInput {
+  name: String!
+}
+
+input FillProfileGeopositionInput {
+  latitude: Float!
+  longitude: Float!
+}
+
+input AddProfilePhotoInput {
+  photoId: String!
+}
+
+input SkipProfileInput {
+  targetId: String!
+}
+
+input LikeProfileInput {
+  targetId: String!
+}
+
+input StartSurveyInput {
+  questionaireId: String!
+}
+
+input AddSurveyAnswerInput {
+  surveyId: String!
+  questionId: String!
+  answer: Float!
+}
+
+input CreateUploadInput {
+  bucket: String!
+  name: String!
+  size: Float!
+}
+
+input ConfirmUploadInput {
+  id: ID!
+}

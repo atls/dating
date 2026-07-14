@@ -21,13 +21,13 @@ export const MatchesScreen = (): ReactElement | null => {
   const [matches, setMatches] = useState<
     Array<{
       profile: Profile
-      similarly?: { id: string; value: number }
+      similary?: { id: string; value: number }
     }>
   >([])
   const ref = useRef<
     Swiper<{
       profile: Profile
-      similarly?: { id: string; value: number }
+      similary?: { id: string; value: number }
     }>
   >(null)
 
