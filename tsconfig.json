@@ -26,9 +26,5 @@
     "strictPropertyInitialization": false,
     "outDir": "./dist"
   },
-  "include": [
-    "project.types.d.ts",
-    "native/**/*"
-  ],
-  "exclude": [".idea"]
+  "include": ["project.types.d.ts", "native/**/*"]
 }
